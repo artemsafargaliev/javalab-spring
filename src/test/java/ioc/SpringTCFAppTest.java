@@ -1,8 +1,10 @@
 package ioc;
 
-import lab.model.UsualPerson;
+import lab.model.Person;
+import lombok.AllArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -11,8 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration("classpath:application-context.xml")
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 class SpringTCFAppTest {
-    private UsualPerson person;
+    private Person person;
 
     @Test
     void testInitPerson() {

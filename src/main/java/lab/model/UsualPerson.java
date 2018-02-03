@@ -11,5 +11,7 @@ public class UsualPerson implements Person {
     private String lastName;
     private Country country;
     private int age;
+    private float height;
+    private boolean isProgrammer;
     private List<Contact> contacts;
 }
